@@ -307,7 +307,7 @@ neighbours.indexOf("Dog")`;
 
       case "lastIndexOf":
         this.codeEl.value = `const neighbours = ["Bird","Rat","Dog","Pig","Dog"];
-neighbours.indexOf("Dog")`;
+neighbours.lastIndexOf("Dog")`;
         this.descriptionEl.textContent = `The lastIndexOf() method returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards.`;
         break;
 
