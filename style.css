@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fira Mono", monospace;
+  padding: 1rem;
+  background-color: #fcfdfc;
+}
+
+.modal {
+  max-width: 20rem;
+  padding: 1rem;
+  border-radius: 5px;
+  display: none;
+  background-color: black;
+  color: #de978f;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
+
+.show {
+  display: block;
+}
+
+.wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.boxes {
+  flex-basis: 100%;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.box,
+.optionbox--option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 4rem;
+  cursor: pointer;
+}
+
+.cat {
+  background-color: #a45cb9;
+}
+
+.wolf {
+  background-color: #02c39a;
+}
+
+.panda {
+  background-color: #d62828;
+}
+
+.sheep {
+  background-color: #35b4c9;
+}
+
+.box:hover {
+  opacity: 0.8;
+}
+
+.box:hover svg {
+  animation: turn 250ms ease-in-out infinite;
+}
+
+img,
+svg {
+  width: 100%;
+  height: 48px;
+}
+
+.header {
+  display: flex;
+}
+
+.optionbox {
+  display: flex;
+}
+
+.optionbox > *:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.command-area {
+  margin-bottom: 0.5rem;
+}
+
+.select {
+  width: 100%;
+  display: block;
+  border: 1px solid #2b2f6c;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.codebox {
+  flex-basis: 100%;
+  max-width: 25rem;
+}
+
+.code {
+  outline: none;
+  border: none;
+  resize: none;
+  height: 10rem;
+  width: 100%;
+  background-color: #564779;
+  color: white;
+  padding: 1rem;
+  font-weight: 700;
+  white-space: pre-wrap;
+  overflow: auto;
+}
+
+.selected .text {
+  overflow: auto;
+  padding: 1rem;
+  font-size: 0.8rem;
+  background-color: #161716;
+  color: #2cf72c;
+}
+
+.header {
+  margin-bottom: 1rem;
+}
+
+button,
+select {
+  border-radius: 2px;
+  box-shadow: 1px 1px 5px #c5b6b6;
+  outline: none;
+  border: none;
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  margin: 0 0.2rem;
+  cursor: pointer;
+}
+
+option {
+  background-color: #0e0d0d;
+  color: white;
+}
+
+.selected-char {
+  border: 4px dashed black;
+}
+
+.run {
+  width: 100%;
+  display: inline-block;
+  margin-top: 0.3rem;
+  margin-left: 0;
+  margin-right: 0;
+  background-color: #2b2f6c;
+  color: white;
+}
+
+.output-area {
+  font-weight: 700;
+  margin-top: 0.5rem;
+  color: #2b2f6c;
+}
+
+.result {
+  font-weight: 400;
+}
+
+.description-area {
+  width: 100%;
+  max-width: 25rem;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-top: 1rem;
+  color: #2b2f6c;
+  background-color: #de978f;
+}
+
+.description {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .codebox {
+      width: 90%;
+      
+  }
+
+  .output-area {
+      padding-left: 1.5rem;
+  }
+
+  .output-area, .description-area {
+      width: 90%;
+      margin: 1rem auto;
+  }
+
+
+  .header {
+    justify-content: center;
+  }
+
+  .optionbox {
+    margin-bottom: 1rem;
+  }
+
+  
+}
+
+.app-info {
+  position: fixed;
+  opacity: 0.5;
+  bottom: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.app-info:hover {
+  opacity: 1;
+}
+
+@keyframes turn {
+  0% {
+    transform: rotate(-10deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
