@@ -300,12 +300,14 @@ secretNumberOfGinko.join("-");`;
         break;
 
       case "indexOf":
-        this.codeEl.value = `animals.indexOf(${type})`;
+        this.codeEl.value = `const neighbours = ["Bird","Rat","Dog","Pig","Dog"];
+neighbours.indexOf("Dog")`;
         this.descriptionEl.textContent = `The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.`;
         break;
 
       case "lastIndexOf":
-        this.codeEl.value = `animals.lastIndexOf(${type})`;
+        this.codeEl.value = `const neighbours = ["Bird","Rat","Dog","Pig","Dog"];
+neighbours.indexOf("Dog")`;
         this.descriptionEl.textContent = `The lastIndexOf() method returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards.`;
         break;
 
